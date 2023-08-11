@@ -3,9 +3,9 @@ services:
   db:
     image: postgres
     environment:
-      - POSTGRES_DB=<%= ENV['PRODUCTION_DATABASE_NAME'] %>
-      - POSTGRES_USER=<%= ENV['PRODUCTION_DATABASE_USERNAME'] %>
-      - POSTGRES_PASSWORD=<%= ENV['PRODUCTION_DATABASE_PASSWORD'] %>
+      - POSTGRES_DB=<%= ENV['POSTGRES_NAME'] %>
+      - POSTGRES_USER=<%= ENV['POSTGRES_USERNAME'] %>
+      - POSTGRES_PASSWORD=<%= ENV['POSTGRES_PASSWORD'] %>
       - POSTGRES_HOST_AUTH_METHOD=trust
   web:
     build: .
